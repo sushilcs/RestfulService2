@@ -33,7 +33,7 @@ public class HelloWorldController {
 		return bean;
 
 	}
-	@GetMapping("/hello-world-bean/{name}")
+	@GetMapping(value="/hello-world-bean/{name}")
 	@ResponseBody
 	public String helloWorlwihtPath(@PathVariable("name")String name) {
 

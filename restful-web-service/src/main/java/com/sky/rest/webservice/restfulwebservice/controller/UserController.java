@@ -31,7 +31,7 @@ public class UserController {
 		return udao.getAllUsers();
 	}
 
-	@PostMapping("/users")
+	@PostMapping(value="/users",consumes= {"application/xml","application/json"})
 	@ResponseBody
 	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
 		User savedUser = udao.save(user);
