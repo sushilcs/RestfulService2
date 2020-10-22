@@ -25,7 +25,7 @@ public class UserController {
 	@Autowired
 	UserDao udao;
 
-	@GetMapping("/users")
+	@GetMapping(value="/users",produces= {"application/xml","application/json"})
 	@ResponseBody
 	public List<User> getAllUsers() {
 		return udao.getAllUsers();
